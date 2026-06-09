@@ -1,65 +1,352 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import ProjectCard from "@/components/ui/ProjectCard";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { getFeaturedProjects } from "@/lib/projects";
+
+function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 80));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(current);
+      }
+    }, 20);
+    return () => clearInterval(timer);
+  }, [inView, target]);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
+const featured = getFeaturedProjects();
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ═══ HERO ═══ */}
+      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=85&auto=format&fit=crop"
+          alt="HK-Decord — Thiết kế nội thất cao cấp"
+          fill
+          className="object-cover"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/65 via-charcoal/45 to-charcoal/70" />
+
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, letterSpacing: "0.6em" }}
+            animate={{ opacity: 1, letterSpacing: "0.4em" }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="font-sans text-[10px] text-white/70 tracking-[0.4em] uppercase mb-6"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Chào Mừng Đến Với
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="font-serif text-[clamp(3.5rem,10vw,7rem)] font-light text-white leading-none tracking-wide mb-6"
           >
-            Documentation
-          </a>
+            HK-Decord
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.9 }}
+            className="font-sans text-sm text-white/70 tracking-[0.12em] mb-12 max-w-md mx-auto"
+          >
+            Thiết kế không gian sống tinh tế — nơi nghệ thuật và kiến trúc giao thoa
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 1.1 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Link
+              href="/du-an"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gold text-white font-sans text-[11px] tracking-[0.2em] uppercase hover:bg-gold-dark transition-colors duration-300"
+            >
+              Xem Dự Án <ArrowRight size={14} />
+            </Link>
+            <Link
+              href="/lien-he"
+              className="inline-flex items-center px-8 py-4 border border-white/60 text-white font-sans text-[11px] tracking-[0.2em] uppercase hover:bg-white hover:text-charcoal transition-all duration-300"
+            >
+              Tư Vấn Miễn Phí
+            </Link>
+          </motion.div>
         </div>
-      </main>
-    </div>
+
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.2 }}
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        >
+          <span className="font-sans text-[9px] text-white/45 tracking-[0.35em] uppercase">Khám Phá</span>
+          <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.8 }}>
+            <ChevronDown size={16} className="text-white/45" />
+          </motion.div>
+        </motion.button>
+      </section>
+
+      {/* ═══ FEATURED PROJECTS ═══ */}
+      <section className="py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Portfolio</p>
+            <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
+              Dự Án <em className="text-gold not-italic">Nổi Bật</em>
+            </h2>
+            <div className="w-12 h-px bg-gold mx-auto mt-5" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {featured.map((project, i) => (
+              <AnimatedSection key={project.id} delay={i * 0.12}>
+                <ProjectCard project={project} priority={i === 0} />
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-14">
+            <Link
+              href="/du-an"
+              className="inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-charcoal border-b border-charcoal/40 pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300"
+            >
+              Xem Tất Cả Dự Án <ArrowRight size={13} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══ ABOUT ═══ */}
+      <section className="bg-cream py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+          <AnimatedSection direction="right">
+            <div className="relative">
+              <div className="aspect-[4/5] relative overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80&auto=format&fit=crop"
+                  alt="Đội ngũ HK-Decord"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold/15 -z-10" />
+              <div className="absolute -top-5 -left-5 w-20 h-20 border border-gold/25" />
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection direction="left" delay={0.15}>
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-4">Về Chúng Tôi</p>
+            <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-charcoal leading-tight mb-5">
+              Thiết kế tinh tế,<br />
+              <em className="text-gold">không gian hoàn hảo</em>
+            </h2>
+            <div className="w-10 h-px bg-gold mb-7" />
+            <p className="font-sans text-sm text-charcoal/60 leading-loose mb-4">
+              HK-Decord được thành lập với niềm đam mê biến mỗi không gian thành một tác phẩm nghệ thuật sống. Chúng tôi tin rằng một ngôi nhà đẹp không chỉ về thẩm mỹ — đó là nơi kể câu chuyện của bạn.
+            </p>
+            <p className="font-sans text-sm text-charcoal/60 leading-loose mb-10">
+              Với đội ngũ kiến trúc sư và nhà thiết kế nội thất giàu kinh nghiệm, chúng tôi đồng hành từ bản vẽ đầu tiên đến khi bàn giao công trình hoàn thiện.
+            </p>
+            <Link
+              href="/ve-chung-toi"
+              className="inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-charcoal border-b border-charcoal/40 pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300"
+            >
+              Tìm Hiểu Thêm <ArrowRight size={13} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══ STATS ═══ */}
+      <section className="bg-charcoal py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: 150, suffix: "+", label: "Dự Án Hoàn Thành" },
+              { value: 8, suffix: "+", label: "Năm Kinh Nghiệm" },
+              { value: 98, suffix: "%", label: "Khách Hàng Hài Lòng" },
+              { value: 25, suffix: "+", label: "Giải Thưởng" },
+            ].map((stat, i) => (
+              <AnimatedSection key={stat.label} delay={i * 0.1}>
+                <p className="font-serif text-[clamp(2.5rem,6vw,4rem)] font-light text-gold mb-2">
+                  <Counter target={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-white/45">
+                  {stat.label}
+                </p>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SERVICES ═══ */}
+      <section className="py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Những Gì Chúng Tôi Làm</p>
+            <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
+              Dịch <em className="text-gold not-italic">Vụ</em>
+            </h2>
+            <div className="w-12 h-px bg-gold mx-auto mt-5" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                num: "01",
+                title: "Thiết Kế Nội Thất",
+                desc: "Tư vấn và thiết kế nội thất toàn diện cho căn hộ, biệt thự, nhà phố. Từ concept đến hoàn thiện thi công với vật liệu cao cấp.",
+                img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=75&auto=format&fit=crop",
+              },
+              {
+                num: "02",
+                title: "Thiết Kế Bản Vẽ",
+                desc: "Lập hồ sơ thiết kế kiến trúc đầy đủ: mặt bằng, mặt đứng, mặt cắt, phối cảnh 3D và bản vẽ thi công chi tiết.",
+                img: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=75&auto=format&fit=crop",
+              },
+              {
+                num: "03",
+                title: "Tư Vấn & Thi Công",
+                desc: "Tư vấn chọn lựa vật liệu, giám sát thi công và quản lý dự án đảm bảo tiến độ, chất lượng theo đúng thiết kế.",
+                img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=75&auto=format&fit=crop",
+              },
+            ].map((svc, i) => (
+              <AnimatedSection key={svc.num} delay={i * 0.12}>
+                <div className="group cursor-default">
+                  <div className="aspect-[4/3] relative overflow-hidden mb-6 bg-warm-gray">
+                    <Image
+                      src={svc.img}
+                      alt={svc.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 w-9 h-9 bg-gold flex items-center justify-center">
+                      <span className="font-sans text-[10px] text-white font-semibold">{svc.num}</span>
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-2xl text-charcoal mb-3 group-hover:text-gold transition-colors duration-300">
+                    {svc.title}
+                  </h3>
+                  <p className="font-sans text-sm text-charcoal/55 leading-relaxed">{svc.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-14">
+            <Link
+              href="/dich-vu"
+              className="inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-charcoal border-b border-charcoal/40 pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300"
+            >
+              Xem Chi Tiết Dịch Vụ <ArrowRight size={13} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══ TESTIMONIALS ═══ */}
+      <section className="bg-beige py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Khách Hàng Nói Gì</p>
+            <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
+              Cảm <em className="text-gold not-italic">Nhận</em>
+            </h2>
+            <div className="w-12 h-px bg-gold mx-auto mt-5" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                quote: "HK-Decord đã biến căn hộ 120m² của chúng tôi thành không gian sống mơ ước. Từng chi tiết đều được chăm chút tỉ mỉ, đội ngũ rất chuyên nghiệp và lắng nghe.",
+                name: "Anh Minh Tuấn",
+                role: "Căn Hộ Quận 7, TP.HCM",
+              },
+              {
+                quote: "Bản vẽ thiết kế rất chi tiết và chuyên nghiệp. Công trình hoàn thiện đúng tiến độ, đúng với thiết kế đề ra. Chúng tôi rất hài lòng với kết quả.",
+                name: "Chị Thanh Hà",
+                role: "Biệt Thự Bình Thạnh, TP.HCM",
+              },
+            ].map((t, i) => (
+              <AnimatedSection key={i} delay={i * 0.15}>
+                <div className="bg-white p-8 md:p-10 relative">
+                  <span className="font-serif text-8xl text-gold/15 absolute top-2 left-5 leading-none select-none">&ldquo;</span>
+                  <p className="font-serif text-lg text-charcoal/75 leading-relaxed mb-8 pt-6 italic">{t.quote}</p>
+                  <div className="flex items-center gap-4 border-t border-warm-gray pt-5">
+                    <div className="w-10 h-10 rounded-full bg-warm-gray flex-shrink-0" />
+                    <div>
+                      <p className="font-sans text-sm font-medium text-charcoal">{t.name}</p>
+                      <p className="font-sans text-[11px] text-gold">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ CTA BANNER ═══ */}
+      <section className="relative py-28 md:py-40 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80&auto=format&fit=crop"
+          alt="Bắt đầu dự án nội thất"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-charcoal/72" />
+        <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
+          <AnimatedSection>
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-4">Bắt Đầu Ngay Hôm Nay</p>
+            <h2 className="font-serif text-[clamp(2rem,5vw,3.75rem)] font-light text-white leading-tight mb-6">
+              Hãy Cùng Tạo Nên
+              <br />
+              <em className="text-gold">Không Gian Của Bạn</em>
+            </h2>
+            <p className="font-sans text-sm text-white/60 mb-10 leading-relaxed">
+              Liên hệ với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết.
+            </p>
+            <Link
+              href="/lien-he"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-white font-sans text-[11px] tracking-[0.2em] uppercase hover:bg-gold-dark transition-colors duration-300"
+            >
+              Liên Hệ Tư Vấn <ArrowRight size={14} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+    </>
   );
 }

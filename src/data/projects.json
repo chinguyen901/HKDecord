@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "slug": "can-ho-luxe-quan-7",
+    "title": "Căn Hộ Luxe Quận 7",
+    "category": "can-ho",
+    "area": "120m²",
+    "year": 2024,
+    "location": "Quận 7, TP.HCM",
+    "style": "Hiện Đại",
+    "thumbnail": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Không gian sống hiện đại tại trung tâm Quận 7 với tông màu trung tính ấm áp. Mỗi góc phòng đều được thiết kế tỉ mỉ để tối ưu hóa ánh sáng tự nhiên và tạo cảm giác rộng rãi, thoải mái cho gia đình.",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "slug": "biet-thu-saigon-pearl",
+    "title": "Biệt Thự Saigon Pearl",
+    "category": "biet-thu",
+    "area": "350m²",
+    "year": 2024,
+    "location": "Bình Thạnh, TP.HCM",
+    "style": "Tân Cổ Điển",
+    "thumbnail": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Biệt thự cao cấp phong cách Tân Cổ Điển với không gian nội thất sang trọng. Sự kết hợp hoàn hảo giữa kiến trúc cổ điển và tiện nghi hiện đại.",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "slug": "penthouse-sky-garden",
+    "title": "Penthouse Sky Garden",
+    "category": "can-ho",
+    "area": "250m²",
+    "year": 2023,
+    "location": "Quận 2, TP.HCM",
+    "style": "Minimalist",
+    "thumbnail": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Penthouse đẳng cấp với tầm nhìn panoramic ra sông Sài Gòn. Phong cách minimalist thuần khiết kết hợp với vật liệu cao cấp mang lại không gian sống lý tưởng.",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "slug": "villa-thu-duc",
+    "title": "Villa Thủ Đức",
+    "category": "biet-thu",
+    "area": "420m²",
+    "year": 2023,
+    "location": "Thủ Đức, TP.HCM",
+    "style": "Nhiệt Đới Hiện Đại",
+    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Villa nhiệt đới hiện đại với không gian mở hòa hợp thiên nhiên. Tận dụng tối đa ánh sáng tự nhiên, kết hợp hồ bơi và sân vườn tuyệt đẹp.",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "slug": "can-ho-vinhomes-central-park",
+    "title": "Căn Hộ Vinhomes Central Park",
+    "category": "can-ho",
+    "area": "95m²",
+    "year": 2023,
+    "location": "Bình Thạnh, TP.HCM",
+    "style": "Scandinavian",
+    "thumbnail": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Căn hộ phong cách Scandinavian sáng sủa và ấm cúng. Sử dụng gam màu trắng chủ đạo kết hợp với gỗ tự nhiên tạo nên không gian yên bình.",
+    "featured": false
+  },
+  {
+    "id": "6",
+    "slug": "biet-thu-bien-nha-trang",
+    "title": "Biệt Thự Biển Nha Trang",
+    "category": "biet-thu",
+    "area": "280m²",
+    "year": 2022,
+    "location": "Nha Trang, Khánh Hòa",
+    "style": "Resort",
+    "thumbnail": "https://images.unsplash.com/photo-1613490493576-4b9b93543a32?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1613490493576-4b9b93543a32?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Biệt thự nghỉ dưỡng ven biển theo phong cách resort 5 sao với vật liệu tự nhiên như đá, gỗ và mây tre.",
+    "featured": false
+  },
+  {
+    "id": "7",
+    "slug": "ban-ve-nha-pho-quan-3",
+    "title": "Bản Vẽ Nhà Phố Quận 3",
+    "category": "ban-ve",
+    "area": "6×18m",
+    "year": 2024,
+    "location": "Quận 3, TP.HCM",
+    "style": "Hiện Đại",
+    "thumbnail": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Thiết kế và bản vẽ thi công nhà phố 4 tầng. Giải pháp không gian thông minh, tận dụng tối đa diện tích đất.",
+    "featured": false
+  },
+  {
+    "id": "8",
+    "slug": "ban-ve-biet-thu-3-tang",
+    "title": "Bản Vẽ Biệt Thự 3 Tầng",
+    "category": "ban-ve",
+    "area": "10×20m",
+    "year": 2024,
+    "location": "Long An",
+    "style": "Tân Cổ Điển",
+    "thumbnail": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Thiết kế bản vẽ biệt thự tân cổ điển 3 tầng với đầy đủ mặt bằng, mặt cắt và bản vẽ kỹ thuật chi tiết.",
+    "featured": false
+  },
+  {
+    "id": "9",
+    "slug": "studio-luxury-quan-1",
+    "title": "Studio Luxury Quận 1",
+    "category": "can-ho",
+    "area": "45m²",
+    "year": 2022,
+    "location": "Quận 1, TP.HCM",
+    "style": "Industrial",
+    "thumbnail": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80&auto=format&fit=crop"
+    ],
+    "description": "Studio cao cấp phong cách Industrial tại trung tâm Quận 1. Thiết kế thông minh tối ưu không gian, tạo cảm giác thoáng đãng và cá tính.",
+    "featured": false
+  }
+]
