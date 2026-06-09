@@ -18,7 +18,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const contactInfo = [
-  { icon: MapPin, label: "Địa Chỉ", value: "123 Đường Lê Lợi, Quận 1\nTP. Hồ Chí Minh" },
+  { icon: MapPin, label: "Địa Chỉ", value: "6/8 Phạm Văn Chiêu, Thông Tây Hội\nTP. Hồ Chí Minh" },
   { icon: Phone, label: "Điện Thoại", value: "+84 90 123 4567" },
   { icon: Mail, label: "Email", value: "contact@hkdecord.vn" },
   { icon: Clock, label: "Giờ Làm Việc", value: "Thứ 2–6: 8:00–18:00\nThứ 7: 8:00–12:00" },
@@ -218,7 +218,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <MapPin size={32} className="text-gold mx-auto mb-3" />
-            <p className="font-sans text-sm text-charcoal/50">123 Đường Lê Lợi, Quận 1, TP.HCM</p>
+            <p className="font-sans text-sm text-charcoal/50">6/8 Phạm Văn Chiêu, Thông Tây Hội, TP.HCM</p>
             <a
               href="https://maps.google.com"
               target="_blank"

@@ -6,53 +6,37 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Về Chúng Tôi",
-  description: "Tìm hiểu về HK-Decord — đội ngũ kiến trúc sư và nhà thiết kế nội thất với hơn 8 năm kinh nghiệm.",
+  description: "Tìm hiểu về HK-Decord — kiến trúc sư & nhà thiết kế nội thất với hơn 8 năm kinh nghiệm tại TP.HCM.",
 };
-
-const team = [
-  {
-    name: "Nguyễn Hoàng Khải",
-    role: "Founder & Kiến Trúc Sư Trưởng",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop&face",
-  },
-  {
-    name: "Trần Minh Châu",
-    role: "Nhà Thiết Kế Nội Thất",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format&fit=crop&face",
-  },
-  {
-    name: "Lê Thị Hương",
-    role: "Chuyên Viên Thiết Kế 3D",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop&face",
-  },
-];
 
 const values = [
   { title: "Sáng Tạo", desc: "Mỗi công trình là một tác phẩm độc đáo, phản ánh cá tính và câu chuyện riêng của gia chủ." },
-  { title: "Tỉ Mỉ", desc: "Chúng tôi chú trọng từng chi tiết nhỏ nhất, từ màu sắc đến vật liệu, để tạo nên sự hoàn hảo." },
+  { title: "Tỉ Mỉ", desc: "Chú trọng từng chi tiết nhỏ nhất, từ màu sắc đến vật liệu, để tạo nên sự hoàn hảo." },
   { title: "Tin Cậy", desc: "Cam kết tiến độ và chất lượng, minh bạch trong từng bước thực hiện dự án." },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Header with hero image */}
-      <section className="relative pt-0">
-        <div className="relative h-[50vh] min-h-[360px] md:h-[60vh] overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&q=85&auto=format&fit=crop"
-            alt="Đội ngũ HK-Decord"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-charcoal/60" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pt-20">
-            <AnimatedSection>
-              <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Câu Chuyện Của Chúng Tôi</p>
-              <h1 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-light text-white">Về HK-Decord</h1>
-            </AnimatedSection>
-          </div>
+      {/* Header hero */}
+      <section className="relative h-[50vh] min-h-[360px] md:h-[60vh] overflow-hidden">
+        <Image
+          src="/img-kitchen.jpg"
+          alt="HK-Decord — Dự án thiết kế nội thất"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-charcoal/65" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pt-20">
+          <AnimatedSection>
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">
+              Câu Chuyện Của Chúng Tôi
+            </p>
+            <h1 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-light text-white">
+              Về HK-Decord
+            </h1>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -60,13 +44,17 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 px-6 md:px-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
           <AnimatedSection direction="right">
-            <div className="aspect-[4/5] relative overflow-hidden bg-warm-gray">
-              <Image
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop"
-                alt="HK-Decord interior project"
-                fill
-                className="object-cover"
-              />
+            <div className="relative">
+              <div className="aspect-[3/4] relative overflow-hidden bg-warm-gray">
+                <Image
+                  src="/img-dining-1.jpg"
+                  alt="Dự án biệt thự tân cổ điển HK-Decord"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold/15 -z-10" />
+              <div className="absolute -top-5 -left-5 w-20 h-20 border border-gold/25" />
             </div>
           </AnimatedSection>
 
@@ -79,10 +67,10 @@ export default function AboutPage() {
             <div className="w-10 h-px bg-gold mb-7" />
             <div className="space-y-4 font-sans text-sm text-charcoal/60 leading-loose">
               <p>
-                HK-Decord được thành lập năm 2016 với niềm đam mê biến những không gian thông thường thành các tác phẩm nghệ thuật sống. Xuất phát từ một studio nhỏ tại TP.HCM, chúng tôi đã dần khẳng định vị thế trong lĩnh vực thiết kế nội thất và kiến trúc.
+                HK-Decord được thành lập với niềm đam mê biến những không gian thông thường thành các tác phẩm nghệ thuật sống. Xuất phát từ tình yêu với kiến trúc và thiết kế nội thất, chúng tôi đã dần khẳng định vị thế tại TP.HCM.
               </p>
               <p>
-                Với hơn 150 dự án đã hoàn thiện, chúng tôi hiểu rằng mỗi ngôi nhà kể một câu chuyện riêng. Sứ mệnh của chúng tôi là lắng nghe câu chuyện đó và dệt nó thành không gian sống đẹp, thực dụng và đầy cảm xúc.
+                Chúng tôi hiểu rằng mỗi ngôi nhà kể một câu chuyện riêng. Sứ mệnh là lắng nghe câu chuyện đó và dệt nên không gian sống đẹp, thực dụng và đầy cảm xúc — từ bản vẽ đầu tiên đến khi bàn giao hoàn thiện.
               </p>
             </div>
           </AnimatedSection>
@@ -114,33 +102,46 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Founder — solo */}
       <section className="py-20 md:py-28 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Con Người</p>
             <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
-              Đội <em className="text-gold not-italic">Ngũ</em>
+              Người <em className="text-gold not-italic">Sáng Lập</em>
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mt-5" />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {team.map((member, i) => (
-              <AnimatedSection key={member.name} delay={i * 0.12} className="text-center">
-                <div className="aspect-[3/4] relative overflow-hidden mb-5 bg-warm-gray">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    fill
-                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="font-serif text-xl text-charcoal mb-1">{member.name}</h3>
-                <p className="font-sans text-[11px] tracking-wide text-gold">{member.role}</p>
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection className="max-w-sm mx-auto text-center">
+            <div className="aspect-[3/4] relative overflow-hidden mb-6 bg-warm-gray">
+              <Image
+                src="/Avatar.png"
+                alt="Founder HK-Decord"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <h3 className="font-serif text-2xl text-charcoal mb-2">HK-Decord</h3>
+            <p className="font-sans text-[11px] tracking-[0.2em] text-gold uppercase">
+              Founder &amp; Kiến Trúc Sư Trưởng
+            </p>
+            <div className="w-8 h-px bg-gold mx-auto my-4" />
+            <p className="font-sans text-sm text-charcoal/55 leading-relaxed">
+              Với đam mê kiến trúc và thiết kế nội thất, tôi luôn nỗ lực mang lại những không gian sống tinh tế, đúng với phong cách và nhu cầu của từng gia chủ.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Gallery row — showcase real projects */}
+      <section className="py-4 px-0">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
+          {["/img-kitchen.jpg", "/img-dining-1.jpg", "/img-exterior.jpg", "/img-garden.jpg", "/img-office-1.jpg", "/img-dining-2.jpg"].map((src, i) => (
+            <AnimatedSection key={i} delay={i * 0.06} className="aspect-square relative overflow-hidden bg-warm-gray">
+              <Image src={src} alt={`Dự án HK-Decord ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 
@@ -151,7 +152,7 @@ export default function AboutPage() {
             Cùng Tạo Nên <em className="text-gold">Điều Tuyệt Vời</em>
           </h2>
           <p className="font-sans text-sm text-white/55 leading-relaxed mb-8">
-            Hãy chia sẻ ý tưởng của bạn với chúng tôi. Tư vấn miễn phí, không ràng buộc.
+            Hãy chia sẻ ý tưởng của bạn. Tư vấn miễn phí, không ràng buộc.
           </p>
           <Link
             href="/lien-he"

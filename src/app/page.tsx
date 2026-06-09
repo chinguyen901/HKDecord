@@ -46,7 +46,7 @@ export default function HomePage() {
       {/* ═══ HERO ═══ */}
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=85&auto=format&fit=crop"
+          src="/img-kitchen.jpg"
           alt="HK-Decord — Thiết kế nội thất cao cấp"
           fill
           className="object-cover"
@@ -154,8 +154,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/5] relative overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80&auto=format&fit=crop"
-                  alt="Đội ngũ HK-Decord"
+                  src="/Avatar.png"
+                  alt="Founder HK-Decord"
                   fill
                   className="object-cover"
                 />
@@ -228,19 +228,19 @@ export default function HomePage() {
                 num: "01",
                 title: "Thiết Kế Nội Thất",
                 desc: "Tư vấn và thiết kế nội thất toàn diện cho căn hộ, biệt thự, nhà phố. Từ concept đến hoàn thiện thi công với vật liệu cao cấp.",
-                img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=75&auto=format&fit=crop",
+                img: "/img-kitchen.jpg",
               },
               {
                 num: "02",
                 title: "Thiết Kế Bản Vẽ",
                 desc: "Lập hồ sơ thiết kế kiến trúc đầy đủ: mặt bằng, mặt đứng, mặt cắt, phối cảnh 3D và bản vẽ thi công chi tiết.",
-                img: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=75&auto=format&fit=crop",
+                img: "/img-exterior.jpg",
               },
               {
                 num: "03",
                 title: "Tư Vấn & Thi Công",
                 desc: "Tư vấn chọn lựa vật liệu, giám sát thi công và quản lý dự án đảm bảo tiến độ, chất lượng theo đúng thiết kế.",
-                img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=75&auto=format&fit=crop",
+                img: "/img-garden.jpg",
               },
             ].map((svc, i) => (
               <AnimatedSection key={svc.num} delay={i * 0.12}>
@@ -321,8 +321,8 @@ export default function HomePage() {
       {/* ═══ CTA BANNER ═══ */}
       <section className="relative py-28 md:py-40 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80&auto=format&fit=crop"
-          alt="Bắt đầu dự án nội thất"
+          src="/img-dining-1.jpg"
+          alt="Bắt đầu dự án nội thất HK-Decord"
           fill
           className="object-cover"
         />

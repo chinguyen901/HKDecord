@@ -54,7 +54,7 @@ export default function Footer() {
             </h3>
             <address className="not-italic space-y-3">
               <p className="font-sans text-sm text-white/55 leading-relaxed">
-                123 Đường Lê Lợi, Quận 1
+                6/8 Phạm Văn Chiêu, Thông Tây Hội
                 <br />
                 TP. Hồ Chí Minh, Việt Nam
               </p>
