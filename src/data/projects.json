@@ -9,10 +9,10 @@
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
     "style": "Tân Cổ Điển",
-    "thumbnail": "/img-kitchen.jpg",
+    "thumbnail": "/projects/biet-thu-tan-co-dien/kitchen.jpg",
     "images": [
-      "/img-kitchen.jpg",
-      "/img-dining-1.jpg"
+      "/projects/biet-thu-tan-co-dien/kitchen.jpg",
+      "/projects/biet-thu-tan-co-dien/dining.jpg"
     ],
     "shortDescription": "Không gian sống đẳng cấp với hệ tủ bếp marble xám và đèn chùm nghệ thuật.",
     "tags": ["Marble cao cấp", "Đèn chùm nghệ thuật", "Gỗ tự nhiên"],
@@ -29,10 +29,10 @@
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
     "style": "Hiện Đại",
-    "thumbnail": "/img-dining-2.jpg",
+    "thumbnail": "/projects/can-ho-hien-dai-phong-an/dining.jpg",
     "images": [
-      "/img-dining-2.jpg",
-      "/img-bedroom.jpg"
+      "/projects/can-ho-hien-dai-phong-an/dining.jpg",
+      "/projects/can-ho-hien-dai-phong-an/bedroom.jpg"
     ],
     "shortDescription": "Căn hộ hiện đại nổi bật với gương kim cương và tủ rượu gỗ óc chó sang trọng.",
     "tags": ["Gỗ óc chó", "Gương trang trí", "Đương đại"],
@@ -49,9 +49,9 @@
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
     "style": "Hiện Đại",
-    "thumbnail": "/img-exterior.jpg",
+    "thumbnail": "/projects/nha-pho-hien-dai-4-tang/exterior.jpg",
     "images": [
-      "/img-exterior.jpg"
+      "/projects/nha-pho-hien-dai-4-tang/exterior.jpg"
     ],
     "shortDescription": "Bản vẽ kiến trúc nhà phố 4 tầng, mặt tiền trắng tối giản, ban công cây xanh.",
     "tags": ["Tối giản", "Ban công xanh", "Tối ưu công năng"],
@@ -68,10 +68,10 @@
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
     "style": "Cổ Điển Hiện Đại",
-    "thumbnail": "/img-office-1.jpg",
+    "thumbnail": "/projects/phong-lam-viec-co-dien/office-1.jpg",
     "images": [
-      "/img-office-1.jpg",
-      "/img-office-2.jpg"
+      "/projects/phong-lam-viec-co-dien/office-1.jpg",
+      "/projects/phong-lam-viec-co-dien/office-2.jpg"
     ],
     "shortDescription": "Phòng làm việc riêng thanh lịch, nội thất trắng kem kết hợp thảm xanh ngọc.",
     "tags": ["Trắng kem", "Thảm xanh ngọc", "Ánh sáng tự nhiên"],
@@ -88,9 +88,9 @@
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
     "style": "Cổ Điển Châu Âu",
-    "thumbnail": "/img-garden.jpg",
+    "thumbnail": "/projects/san-vuon-co-dien-chau-au/garden.jpg",
     "images": [
-      "/img-garden.jpg"
+      "/projects/san-vuon-co-dien-chau-au/garden.jpg"
     ],
     "shortDescription": "Cảnh quan sân vườn Châu Âu với nhà vòm đá trắng, hồ cá Koi và cầu đá nghệ thuật.",
     "tags": ["Nhà vòm đá trắng", "Hồ cá Koi", "Cây cảnh nghệ thuật"],
@@ -107,10 +107,10 @@
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
     "style": "Nhiệt Đới Hiện Đại",
-    "thumbnail": "/img-balcony-1.jpg",
+    "thumbnail": "/projects/ban-cong-xanh/balcony-1.jpg",
     "images": [
-      "/img-balcony-1.jpg",
-      "/img-balcony-2.jpg"
+      "/projects/ban-cong-xanh/balcony-1.jpg",
+      "/projects/ban-cong-xanh/balcony-2.jpg"
     ],
     "shortDescription": "Hai phương án ban công sáng tạo: tường gỗ ấm hoặc vườn đứng xanh mát giữa đô thị.",
     "tags": ["Vườn đứng", "Gỗ tự nhiên", "Cây thủy sinh"],

@@ -21,7 +21,7 @@ export default function AboutPage() {
       {/* Header hero */}
       <section className="relative h-[50vh] min-h-[360px] md:h-[60vh] overflow-hidden">
         <Image
-          src="/img-kitchen.jpg"
+          src="/projects/biet-thu-tan-co-dien/kitchen.jpg"
           alt="HK-Decord — Dự án thiết kế nội thất"
           fill
           className="object-cover"
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[3/4] relative overflow-hidden bg-warm-gray">
                 <Image
-                  src="/img-dining-1.jpg"
+                  src="/projects/biet-thu-tan-co-dien/dining.jpg"
                   alt="Dự án biệt thự tân cổ điển HK-Decord"
                   fill
                   className="object-cover"
@@ -149,7 +149,14 @@ export default function AboutPage() {
       {/* Gallery row — showcase real projects */}
       <section className="py-4 px-0">
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
-          {["/img-kitchen.jpg", "/img-dining-1.jpg", "/img-exterior.jpg", "/img-garden.jpg", "/img-office-1.jpg", "/img-dining-2.jpg"].map((src, i) => (
+          {[
+            "/projects/biet-thu-tan-co-dien/kitchen.jpg",
+            "/projects/biet-thu-tan-co-dien/dining.jpg",
+            "/projects/nha-pho-hien-dai-4-tang/exterior.jpg",
+            "/projects/san-vuon-co-dien-chau-au/garden.jpg",
+            "/projects/phong-lam-viec-co-dien/office-1.jpg",
+            "/projects/can-ho-hien-dai-phong-an/dining.jpg",
+          ].map((src, i) => (
             <AnimatedSection key={i} delay={i * 0.06} className="aspect-square relative overflow-hidden bg-warm-gray">
               <Image src={src} alt={`Dự án HK-Decord ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
             </AnimatedSection>

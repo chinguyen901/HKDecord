@@ -21,7 +21,7 @@ const services = [
       "Lựa chọn vật liệu và nội thất",
       "Giám sát thi công và hoàn thiện",
     ],
-    img: "/img-kitchen.jpg",
+    img: "/projects/biet-thu-tan-co-dien/kitchen.jpg",
   },
   {
     num: "02",
@@ -34,7 +34,7 @@ const services = [
       "Hồ sơ xin phép xây dựng",
       "Bản vẽ kết cấu và kỹ thuật",
     ],
-    img: "/img-exterior.jpg",
+    img: "/projects/nha-pho-hien-dai-4-tang/exterior.jpg",
   },
   {
     num: "03",
@@ -47,7 +47,7 @@ const services = [
       "Kết nối đội ngũ thi công uy tín",
       "Bàn giao và bảo hành công trình",
     ],
-    img: "/img-garden.jpg",
+    img: "/projects/san-vuon-co-dien-chau-au/garden.jpg",
   },
 ];
 

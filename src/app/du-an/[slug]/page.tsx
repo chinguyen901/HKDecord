@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getProjectBySlug, getRelatedProjects, categoryLabels } from "@/lib/projects";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCard from "@/components/portfolio/ProjectCard";
 import type { Metadata } from "next";
 
 interface Props {

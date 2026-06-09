@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCard from "@/components/portfolio/ProjectCard";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { getFeaturedProjects } from "@/lib/projects";
 
@@ -46,7 +46,7 @@ export default function HomePage() {
       {/* ═══ HERO ═══ */}
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/img-kitchen.jpg"
+          src="/projects/biet-thu-tan-co-dien/kitchen.jpg"
           alt="HK-Decord — Thiết kế nội thất cao cấp"
           fill
           className="object-cover"
@@ -228,19 +228,19 @@ export default function HomePage() {
                 num: "01",
                 title: "Thiết Kế Nội Thất",
                 desc: "Tư vấn và thiết kế nội thất toàn diện cho căn hộ, biệt thự, nhà phố. Từ concept đến hoàn thiện thi công với vật liệu cao cấp.",
-                img: "/img-kitchen.jpg",
+                img: "/projects/biet-thu-tan-co-dien/kitchen.jpg",
               },
               {
                 num: "02",
                 title: "Thiết Kế Bản Vẽ",
                 desc: "Lập hồ sơ thiết kế kiến trúc đầy đủ: mặt bằng, mặt đứng, mặt cắt, phối cảnh 3D và bản vẽ thi công chi tiết.",
-                img: "/img-exterior.jpg",
+                img: "/projects/nha-pho-hien-dai-4-tang/exterior.jpg",
               },
               {
                 num: "03",
                 title: "Tư Vấn & Thi Công",
                 desc: "Tư vấn chọn lựa vật liệu, giám sát thi công và quản lý dự án đảm bảo tiến độ, chất lượng theo đúng thiết kế.",
-                img: "/img-garden.jpg",
+                img: "/projects/san-vuon-co-dien-chau-au/garden.jpg",
               },
             ].map((svc, i) => (
               <AnimatedSection key={svc.num} delay={i * 0.12}>
@@ -368,7 +368,7 @@ export default function HomePage() {
       {/* ═══ CTA BANNER ═══ */}
       <section className="relative py-28 md:py-40 overflow-hidden">
         <Image
-          src="/img-dining-1.jpg"
+          src="/projects/biet-thu-tan-co-dien/dining.jpg"
           alt="Bắt đầu dự án nội thất HK-Decord"
           fill
           className="object-cover"

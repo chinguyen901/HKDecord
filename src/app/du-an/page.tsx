@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCard from "@/components/portfolio/ProjectCard";
 import { allProjects, categoryLabels, type ProjectCategory } from "@/lib/projects";
 
 const filters = ["all", "can-ho", "biet-thu", "ban-ve"] as const;
