@@ -135,13 +135,16 @@ export default function Navbar() {
                   DECORD
                 </span>
               </Link>
-              <button
+              <motion.button
                 onClick={() => setMenuOpen(false)}
                 className="text-white p-1.5"
                 aria-label="Đóng menu"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.15 }}
               >
                 <X size={22} />
-              </button>
+              </motion.button>
             </div>
 
             {/* Nav links */}
@@ -155,7 +158,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="block py-3 font-serif text-5xl text-white hover:text-gold transition-colors duration-200 text-center"
+                    className="block py-3 font-serif text-4xl tracking-widest text-white hover:text-gold transition-colors duration-200 text-center"
                   >
                     {link.label}
                   </Link>

@@ -276,41 +276,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ TESTIMONIALS ═══ */}
-      <section className="bg-beige py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-5xl mx-auto">
+      {/* ═══ QUY TRÌNH ═══ */}
+      <section className="bg-cream py-20 md:py-28 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Khách Hàng Nói Gì</p>
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Quy Trình Làm Việc</p>
             <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
-              Cảm <em className="text-gold not-italic">Nhận</em>
+              4 Bước <em className="text-gold not-italic">Đến Ngôi Nhà Mơ Ước</em>
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mt-5" />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-warm-gray">
+            {[
+              { num: "01", title: "Tư Vấn", body: "Lắng nghe nhu cầu, khảo sát mặt bằng, xác định phong cách và ngân sách phù hợp." },
+              { num: "02", title: "Thiết Kế", body: "Lên bản vẽ concept, phối cảnh 3D, điều chỉnh đến khi gia chủ hoàn toàn hài lòng." },
+              { num: "03", title: "Triển Khai", body: "Giám sát thi công chặt chẽ, kiểm soát vật liệu và tiến độ từng hạng mục." },
+              { num: "04", title: "Bàn Giao", body: "Nghiệm thu hoàn thiện, hỗ trợ bảo hành và tư vấn sau bàn giao." },
+            ].map((step, i) => (
+              <AnimatedSection key={step.num} delay={i * 0.12}>
+                <div className="bg-cream p-8 md:p-10">
+                  <span className="font-serif text-5xl text-gold/25 block mb-4 leading-none">{step.num}</span>
+                  <h3 className="font-serif text-xl text-charcoal mb-3">{step.title}</h3>
+                  <p className="font-sans text-sm text-charcoal/55 leading-relaxed">{step.body}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-10">
+            <Link
+              href="/dich-vu"
+              className="inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-charcoal border-b border-charcoal/40 pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300"
+            >
+              Tìm Hiểu Thêm Về Dịch Vụ <ArrowRight size={13} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══ TRIẾT LÝ THIẾT KẾ ═══ */}
+      <section className="bg-charcoal py-28 md:py-40 px-6 md:px-10">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection className="text-center mb-20">
+            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Quan Điểm Của Chúng Tôi</p>
+            <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-white">
+              Triết Lý <em className="text-gold not-italic">Thiết Kế</em>
+            </h2>
+            <div className="w-12 h-px bg-gold mx-auto mt-5" />
+          </AnimatedSection>
+
+          {/* Editorial pull-quote */}
+          <AnimatedSection className="text-center mb-20">
+            <span className="font-serif text-7xl md:text-9xl text-gold/15 leading-none select-none block mb-4">&ldquo;</span>
+            <p className="font-serif text-[clamp(1.25rem,3.5vw,2rem)] font-light text-white/90 leading-relaxed italic max-w-3xl mx-auto -mt-8">
+              Mỗi không gian đều mang một linh hồn riêng — chúng tôi lắng nghe, thấu hiểu, rồi chuyển hóa thành ngôn ngữ của ánh sáng, vật liệu và tỉ lệ.
+            </p>
+          </AnimatedSection>
+
+          {/* 3 design philosophy pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
             {[
               {
-                quote: "HK-Decord đã biến căn hộ 120m² của chúng tôi thành không gian sống mơ ước. Từng chi tiết đều được chăm chút tỉ mỉ, đội ngũ rất chuyên nghiệp và lắng nghe.",
-                name: "Anh Minh Tuấn",
-                role: "Căn Hộ Quận 7, TP.HCM",
+                number: "01",
+                title: "Lắng Nghe Trước",
+                body: "Thiết kế tốt bắt đầu từ việc hiểu người sống trong đó — lối sống, thói quen, và điều họ coi trọng nhất.",
               },
               {
-                quote: "Bản vẽ thiết kế rất chi tiết và chuyên nghiệp. Công trình hoàn thiện đúng tiến độ, đúng với thiết kế đề ra. Chúng tôi rất hài lòng với kết quả.",
-                name: "Chị Thanh Hà",
-                role: "Biệt Thự Bình Thạnh, TP.HCM",
+                number: "02",
+                title: "Tỉ Lệ & Vật Liệu",
+                body: "Chúng tôi chọn vật liệu bằng tay, kiểm soát từng tỉ lệ — vì cái đẹp bền vững đến từ sự chính xác.",
               },
-            ].map((t, i) => (
-              <AnimatedSection key={i} delay={i * 0.15}>
-                <div className="bg-white p-8 md:p-10 relative">
-                  <span className="font-serif text-8xl text-gold/15 absolute top-2 left-5 leading-none select-none">&ldquo;</span>
-                  <p className="font-serif text-lg text-charcoal/75 leading-relaxed mb-8 pt-6 italic">{t.quote}</p>
-                  <div className="flex items-center gap-4 border-t border-warm-gray pt-5">
-                    <div className="w-10 h-10 rounded-full bg-warm-gray flex-shrink-0" />
-                    <div>
-                      <p className="font-sans text-sm font-medium text-charcoal">{t.name}</p>
-                      <p className="font-sans text-[11px] text-gold">{t.role}</p>
-                    </div>
-                  </div>
+              {
+                number: "03",
+                title: "Công Năng Là Nền Tảng",
+                body: "Không gian đẹp nhưng không tiện nghi là thất bại. Thẩm mỹ phải phục vụ cuộc sống, không phải ngược lại.",
+              },
+            ].map((p, i) => (
+              <AnimatedSection key={i} delay={i * 0.12}>
+                <div className="bg-charcoal p-8 md:p-10">
+                  <span className="font-serif text-4xl text-gold/30 block mb-5">{p.number}</span>
+                  <h3 className="font-serif text-lg font-light text-white mb-3">{p.title}</h3>
+                  <p className="font-sans text-sm text-white/50 leading-relaxed">{p.body}</p>
                 </div>
               </AnimatedSection>
             ))}

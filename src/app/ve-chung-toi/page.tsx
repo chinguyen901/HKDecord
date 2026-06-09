@@ -83,7 +83,7 @@ export default function AboutPage() {
           <AnimatedSection className="text-center mb-16">
             <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-gold mb-3">Giá Trị Cốt Lõi</p>
             <h2 className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-light text-charcoal">
-              Triết Lý <em className="text-gold not-italic">Thiết Kế</em>
+              Điều Chúng Tôi <em className="text-gold not-italic">Tin Tưởng</em>
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mt-5" />
           </AnimatedSection>
@@ -113,23 +113,35 @@ export default function AboutPage() {
             <div className="w-12 h-px bg-gold mx-auto mt-5" />
           </AnimatedSection>
 
-          <AnimatedSection className="max-w-sm mx-auto text-center">
-            <div className="aspect-[3/4] relative overflow-hidden mb-6 bg-warm-gray">
-              <Image
-                src="/Avatar.png"
-                alt="Founder HK-Decord"
-                fill
-                className="object-cover"
-              />
+          <AnimatedSection className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div className="aspect-[3/4] relative overflow-hidden bg-warm-gray mx-auto w-full max-w-xs">
+                <Image
+                  src="/Avatar.png"
+                  alt="Founder HK-Decord"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif text-3xl text-charcoal mb-2">Hoàng Kim</h3>
+                <p className="font-sans text-[11px] tracking-[0.2em] text-gold uppercase mb-1">
+                  Founder &amp; Kiến Trúc Sư Trưởng
+                </p>
+                <p className="font-sans text-[10px] tracking-[0.15em] text-charcoal/40 uppercase mb-5">
+                  8+ năm kinh nghiệm · TP. Hồ Chí Minh
+                </p>
+                <div className="w-8 h-px bg-gold mb-6" />
+                <div className="space-y-3 font-sans text-sm text-charcoal/60 leading-loose">
+                  <p>
+                    Tốt nghiệp chuyên ngành Kiến Trúc, tôi bắt đầu sự nghiệp với niềm tin rằng không gian đẹp không phải đặc quyền của số ít — mà là quyền được hưởng của mọi gia đình.
+                  </p>
+                  <p>
+                    Chuyên sâu về phong cách Tân Cổ Điển và Hiện Đại, tôi tiếp cận mỗi dự án bằng việc lắng nghe trước — hiểu lối sống, thói quen, và điều gia chủ thực sự coi trọng — rồi mới bắt đầu phác thảo.
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3 className="font-serif text-2xl text-charcoal mb-2">HK-Decord</h3>
-            <p className="font-sans text-[11px] tracking-[0.2em] text-gold uppercase">
-              Founder &amp; Kiến Trúc Sư Trưởng
-            </p>
-            <div className="w-8 h-px bg-gold mx-auto my-4" />
-            <p className="font-sans text-sm text-charcoal/55 leading-relaxed">
-              Với đam mê kiến trúc và thiết kế nội thất, tôi luôn nỗ lực mang lại những không gian sống tinh tế, đúng với phong cách và nhu cầu của từng gia chủ.
-            </p>
           </AnimatedSection>
         </div>
       </section>

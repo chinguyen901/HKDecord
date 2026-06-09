@@ -70,6 +70,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <AnimatedSection className="md:col-span-3" direction="right">
               <div className="space-y-6 border-l-2 border-gold pl-6 sticky top-28">
                 {[
+                  { label: "Loại Công Trình", value: project.clientType },
                   { label: "Phong Cách", value: project.style },
                   { label: "Diện Tích", value: project.area },
                   { label: "Năm", value: String(project.year) },
@@ -90,9 +91,21 @@ export default async function ProjectDetailPage({ params }: Props) {
               <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-gold mb-4">
                 Mô Tả Dự Án
               </p>
-              <p className="font-sans text-base text-charcoal/70 leading-loose mb-12 max-w-2xl">
+              <p className="font-sans text-base text-charcoal/70 leading-loose mb-8 max-w-2xl">
                 {project.description}
               </p>
+
+              {/* Design tags */}
+              <div className="flex flex-wrap gap-2 mb-12">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-sans text-[9px] tracking-[0.2em] uppercase text-gold border border-gold/40 px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
               {/* Gallery */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

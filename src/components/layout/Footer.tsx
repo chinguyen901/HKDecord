@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerNav = [
   { href: "/du-an", label: "Dự Án" },
@@ -22,9 +23,8 @@ export default function Footer() {
                 DECORD
               </span>
             </div>
-            <p className="font-sans text-sm text-white/55 leading-relaxed max-w-xs">
-              Biến không gian sống của bạn thành tác phẩm nghệ thuật. Chúng tôi
-              thiết kế với tâm huyết, sáng tạo và đam mê.
+            <p className="font-sans text-sm text-white/70 leading-relaxed max-w-xs">
+              Mỗi không gian chúng tôi tạo ra là sự giao thoa giữa thẩm mỹ, công năng và cảm xúc — thiết kế với tâm huyết, bàn giao với trách nhiệm.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-sans text-sm text-white/55 hover:text-gold transition-colors duration-200"
+                    className="font-sans text-sm text-white/70 hover:text-gold transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -52,35 +52,40 @@ export default function Footer() {
             <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-gold mb-6">
               Liên Hệ
             </h3>
-            <address className="not-italic space-y-3">
-              <p className="font-sans text-sm text-white/55 leading-relaxed">
-                6/8 Phạm Văn Chiêu, Thông Tây Hội
-                <br />
-                TP. Hồ Chí Minh, Việt Nam
-              </p>
-              <p>
+            <address className="not-italic space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin size={14} className="text-gold mt-0.5 flex-shrink-0" />
+                <p className="font-sans text-sm text-white/70 leading-relaxed">
+                  6/8 Phạm Văn Chiêu, Thông Tây Hội
+                  <br />
+                  TP. Hồ Chí Minh, Việt Nam
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={14} className="text-gold flex-shrink-0" />
                 <a
                   href="tel:+84901234567"
-                  className="font-sans text-sm text-white/55 hover:text-gold transition-colors"
+                  className="font-sans text-sm text-white/70 hover:text-gold transition-colors"
                 >
                   +84 90 123 4567
                 </a>
-              </p>
-              <p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail size={14} className="text-gold flex-shrink-0" />
                 <a
                   href="mailto:contact@hkdecord.vn"
-                  className="font-sans text-sm text-white/55 hover:text-gold transition-colors"
+                  className="font-sans text-sm text-white/70 hover:text-gold transition-colors"
                 >
                   contact@hkdecord.vn
                 </a>
-              </p>
+              </div>
             </address>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-sans text-[11px] text-white/35 tracking-widest">
+          <p className="font-sans text-[11px] text-white/40 tracking-widest">
             © {new Date().getFullYear()} HK-DECORD. Bảo lưu mọi quyền.
           </p>
           <div className="flex items-center gap-8">
@@ -89,7 +94,7 @@ export default function Footer() {
                 key={social}
                 href="#"
                 aria-label={social}
-                className="font-sans text-[10px] text-white/35 hover:text-gold transition-colors tracking-[0.2em] uppercase"
+                className="font-sans text-[10px] text-white/40 hover:text-gold transition-colors duration-300 tracking-[0.2em] uppercase"
               >
                 {social}
               </a>

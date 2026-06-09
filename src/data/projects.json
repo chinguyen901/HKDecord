@@ -4,6 +4,7 @@
     "slug": "biet-thu-tan-co-dien",
     "title": "Biệt Thự Tân Cổ Điển",
     "category": "biet-thu",
+    "clientType": "Biệt thự gia đình",
     "area": "320m²",
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
@@ -13,6 +14,8 @@
       "/img-kitchen.jpg",
       "/img-dining-1.jpg"
     ],
+    "shortDescription": "Không gian sống đẳng cấp với hệ tủ bếp marble xám và đèn chùm nghệ thuật.",
+    "tags": ["Marble cao cấp", "Đèn chùm nghệ thuật", "Gỗ tự nhiên"],
     "description": "Không gian biệt thự sang trọng phong cách Tân Cổ Điển với hệ thống tủ bếp xám đá marble cao cấp, đèn chùm nghệ thuật và quầy đảo marble trắng. Phòng ăn được thiết kế đồng bộ với bộ bàn ghế da nâu ấm áp, tạo không gian sống đẳng cấp và tinh tế.",
     "featured": true
   },
@@ -21,6 +24,7 @@
     "slug": "can-ho-hien-dai-phong-an",
     "title": "Căn Hộ Hiện Đại",
     "category": "can-ho",
+    "clientType": "Căn hộ cao cấp",
     "area": "110m²",
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
@@ -30,6 +34,8 @@
       "/img-dining-2.jpg",
       "/img-bedroom.jpg"
     ],
+    "shortDescription": "Căn hộ hiện đại nổi bật với gương kim cương và tủ rượu gỗ óc chó sang trọng.",
+    "tags": ["Gỗ óc chó", "Gương trang trí", "Đương đại"],
     "description": "Căn hộ cao cấp với phong cách hiện đại, nổi bật với điểm nhấn mảng gương kim cương trang trí và hệ tủ rượu gỗ óc chó sang trọng. Phòng ngủ được thiết kế theo phong cách đương đại với tủ quần áo hệ âm tường và đèn chùm nghệ thuật độc đáo.",
     "featured": true
   },
@@ -38,7 +44,8 @@
     "slug": "nha-pho-hien-dai-4-tang",
     "title": "Nhà Phố Hiện Đại 4 Tầng",
     "category": "ban-ve",
-    "area": "5×18m",
+    "clientType": "Nhà phố đô thị",
+    "area": "90m²",
     "year": 2024,
     "location": "TP. Hồ Chí Minh",
     "style": "Hiện Đại",
@@ -46,6 +53,8 @@
     "images": [
       "/img-exterior.jpg"
     ],
+    "shortDescription": "Bản vẽ kiến trúc nhà phố 4 tầng, mặt tiền trắng tối giản, ban công cây xanh.",
+    "tags": ["Tối giản", "Ban công xanh", "Tối ưu công năng"],
     "description": "Thiết kế kiến trúc nhà phố 4 tầng phong cách hiện đại với mặt tiền trắng tinh tế, ban công cây xanh tràn đầy sức sống và sân thượng thư giãn. Công trình tối ưu công năng sử dụng, kết hợp hài hòa giữa thẩm mỹ và tiện nghi.",
     "featured": true
   },
@@ -54,6 +63,7 @@
     "slug": "phong-lam-viec-co-dien",
     "title": "Phòng Làm Việc Cổ Điển",
     "category": "can-ho",
+    "clientType": "Không gian làm việc riêng",
     "area": "25m²",
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
@@ -63,6 +73,8 @@
       "/img-office-1.jpg",
       "/img-office-2.jpg"
     ],
+    "shortDescription": "Phòng làm việc riêng thanh lịch, nội thất trắng kem kết hợp thảm xanh ngọc.",
+    "tags": ["Trắng kem", "Thảm xanh ngọc", "Ánh sáng tự nhiên"],
     "description": "Phòng làm việc riêng tư với phong cách cổ điển hiện đại, nội thất trắng kem thanh lịch kết hợp thảm xanh ngọc làm điểm nhấn. Không gian được thiết kế tối ưu ánh sáng tự nhiên, mang lại cảm giác thoải mái và tập trung khi làm việc.",
     "featured": false
   },
@@ -71,6 +83,7 @@
     "slug": "san-vuon-co-dien-chau-au",
     "title": "Sân Vườn Cổ Điển Châu Âu",
     "category": "biet-thu",
+    "clientType": "Biệt thự sân vườn",
     "area": "500m²",
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
@@ -79,6 +92,8 @@
     "images": [
       "/img-garden.jpg"
     ],
+    "shortDescription": "Cảnh quan sân vườn Châu Âu với nhà vòm đá trắng, hồ cá Koi và cầu đá nghệ thuật.",
+    "tags": ["Nhà vòm đá trắng", "Hồ cá Koi", "Cây cảnh nghệ thuật"],
     "description": "Thiết kế cảnh quan sân vườn theo phong cách cổ điển Châu Âu với nhà vòm đá trắng nghệ thuật, hồ cá Koi, cầu đá và hệ thống cây cảnh phong phú. Không gian sống ngoài trời được chăm chút từng chi tiết, tạo nên một góc thiên nhiên riêng biệt.",
     "featured": false
   },
@@ -87,6 +102,7 @@
     "slug": "ban-cong-xanh",
     "title": "Ban Công Xanh & Thư Giãn",
     "category": "can-ho",
+    "clientType": "Ban công căn hộ",
     "area": "12m²",
     "year": 2023,
     "location": "TP. Hồ Chí Minh",
@@ -96,6 +112,8 @@
       "/img-balcony-1.jpg",
       "/img-balcony-2.jpg"
     ],
+    "shortDescription": "Hai phương án ban công sáng tạo: tường gỗ ấm hoặc vườn đứng xanh mát giữa đô thị.",
+    "tags": ["Vườn đứng", "Gỗ tự nhiên", "Cây thủy sinh"],
     "description": "Hai phương án thiết kế ban công sáng tạo: phương án 1 với tường gỗ ấm áp và cây thủy sinh treo nghệ thuật; phương án 2 với tường cây xanh đứng ấn tượng và mặt bàn gỗ thư giãn. Biến ban công nhỏ thành góc thư giãn lý tưởng giữa lòng thành phố.",
     "featured": false
   }

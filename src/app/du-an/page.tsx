@@ -26,7 +26,10 @@ export default function PortfolioPage() {
             <h1 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-light text-charcoal mb-4">
               Dự Án
             </h1>
-            <div className="w-12 h-px bg-gold mx-auto" />
+            <div className="w-12 h-px bg-gold mx-auto mb-6" />
+            <p className="font-sans text-sm text-charcoal/60 leading-relaxed max-w-lg mx-auto">
+              Từng công trình là một câu chuyện riêng — nơi thẩm mỹ gặp gỡ công năng, và cảm xúc trở thành không gian sống.
+            </p>
           </AnimatedSection>
         </div>
       </section>
@@ -39,10 +42,10 @@ export default function PortfolioPage() {
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`flex-shrink-0 px-5 py-2 font-sans text-[10px] tracking-[0.2em] uppercase transition-all duration-200 ${
+                className={`flex-shrink-0 px-5 py-2.5 font-sans text-[10px] tracking-[0.2em] uppercase transition-all duration-300 border-b-2 ${
                   active === f
-                    ? "bg-gold text-white"
-                    : "text-charcoal/60 hover:text-charcoal hover:bg-warm-gray"
+                    ? "border-gold text-gold"
+                    : "border-transparent text-charcoal/50 hover:text-charcoal hover:border-charcoal/20"
                 }`}
               >
                 {categoryLabels[f as keyof typeof categoryLabels]}
